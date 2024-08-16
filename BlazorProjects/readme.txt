@@ -1,1 +1,1 @@
-placeholder for the Blazor projects
+Placeholder for the Blazor projects
