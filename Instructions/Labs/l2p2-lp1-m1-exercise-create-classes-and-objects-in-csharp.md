@@ -31,29 +31,29 @@ For addition help configuring the Visual Studio Code environment, see [https://l
 
 Use the following steps to complete this section of the exercise:
 
-1. Open Visual Studio Code
+1. Open Visual Studio Code.
 
-1. Use Visual Studio Code to create a folder named MyClassProjects on the Windows Desktop
+1. Use Visual Studio Code to create a folder named `MyClassProjects` on the Windows Desktop.
 
-1. Use the Command Palette to create a new console app named Classes_M1
+1. Use the Command Palette to create a new console app named `Classes_M1`.
 
-1. Open the Program.cs file and delete the default “hello, world” code
+1. Open the Program.cs file and delete the default “hello, world” code.
 
-1. Use the Command Palette to create a class named Person
+1. Use the Command Palette to create a class named `Person`
 
-1. Notice that a namespace is specified
+1. Notice that a namespace is specified.
 
-1. Add a default constructor to the Person class
+1. Add a default constructor to the `Person` class.
 
-1. Add local variables (firstName, lastName) to the constructor and a Console.WriteLine() statement announcing that an instance of the Person class has been instantiated using the default name. Show the name as well.
+1. Add local variables (`firstName`, `lastName`) to the constructor and a `Console.WriteLine()` statement announcing that an instance of the `Person` class has been instantiated using the default name values. Show the name as well.
 
 1. Switch to the Program.cs file
 
-1. Create a using statement for the namespace specified in the Person class
+1. Create a using statement for the namespace specified in the `Person` class.
 
-1. Create an instance of the Person class in Program.cs
+1. Create an instance of the `Person` class in the Program.cs file.
 
-1. Run the app
+1. Run the app.
 
 ## Task 2: Create additional constructors for the Person class
 
