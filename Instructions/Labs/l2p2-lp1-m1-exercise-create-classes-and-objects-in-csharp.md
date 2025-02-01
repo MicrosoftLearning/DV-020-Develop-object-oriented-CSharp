@@ -11,15 +11,19 @@ In this exercise, you create a console app that uses class definitions to instan
 
 This exercise includes the following tasks:
 
-- Create a console app and a class file for the `Person` class
-- Create additional constructors for the `Person` class
-- Implement instance and static constructors
+1. Create a console app and `Customer` class
+
+1. Create instance constructors for the `Customer` class
+
+1. Create an `Account` class with instance constructors
+
+1. Implement static constructors for the `Account` class
 
 This exercise should take approximately **15** minutes to complete.
 
 ## Before you start
 
-Before you can start this exercise, you will need to...
+Before you can start this exercise, you need to:
 
 1. Ensure that you have the latest LTS version of the .NET SDK installed on your computer. You can download the latest version of the .NET SDK from the following URL: [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
 1. Ensure that you have Visual Studio Code installed on your computer. You can download Visual Studio Code from the following URL: [https://code.visualstudio.com/](https://code.visualstudio.com/)
@@ -27,7 +31,9 @@ Before you can start this exercise, you will need to...
 
 For addition help configuring the Visual Studio Code environment, see [https://learn.microsoft.com/en-us/training/modules/install-configure-visual-studio-code/](https://learn.microsoft.com/en-us/training/modules/install-configure-visual-studio-code/)
 
-## Task 1: Create a console app and a class file for the `Person` class
+## Task 1: Create a console app and `Customer` class
+
+In this task, you create a console app, add a `Customer` class to the project, and then create class definition for the `Customer` class that includes public fields and a parameterless constructor.
 
 Use the following steps to complete this section of the exercise:
 
@@ -39,55 +45,143 @@ Use the following steps to complete this section of the exercise:
 
 1. Open the Program.cs file and delete the default “hello, world” code.
 
-1. Use the Command Palette to create a class named `Person`
+1. Use the Command Palette to create a class named `Customer`
 
 1. Notice that a namespace is specified.
 
-1. Add a default constructor to the `Person` class.
+1. Add a default constructor to the `Customer` class.
 
-1. Add local variables (`firstName`, `lastName`) to the constructor and a `Console.WriteLine()` statement announcing that an instance of the `Person` class has been instantiated using the default name values. Show the name as well.
-
-1. Switch to the Program.cs file
-
-1. Create a using statement for the namespace specified in the `Person` class.
-
-1. Create an instance of the `Person` class in the Program.cs file.
-
-1. Run the app.
-
-## Task 2: Create additional constructors for the Person class
-
-Use the following steps to complete this section of the exercise:
-
-1. Open the Person.cs file
-
-1. Add a second constructor that accepts a first name parameter.
-
-1. Add local variables to the constructor, assigning the value that’s passed into the constructor to the first name.
-
-1. Update the Console.WriteLine() message.
+1. Add local variables (`firstName`, `lastName`) to the constructor and a `Console.WriteLine()` statement announcing that an instance of the `Customer` class has been instantiated using the default name values. Show the name as well.
 
 1. Switch to the Program.cs file
 
-1. Create a string variable named firstName. Assign a value of “Jane” to firstName.
+1. Create a using statement for the namespace specified in the `Customer` class.
 
-1. Create a second instance of the Person class that uses the new constructor.
+1. Create an instance of the `Customer` class in the Program.cs file.
+
+1. Take a minute to review your code.
+
+    ```csharp
+
+    
+    ```
 
 1. Run the app
 
-1. In the Person.cs file, add a third constructor that accepts first and last names.
+1. Review the output in the terminal window.
+
+    You should see the following output:
+
+    ```plaintext
+
+    ```
+
+## Task 2: Create instance constructors for the `Customer` class
+
+In this task, you create additional instance constructors for the `Customer` class that accept parameters for the first name, last name, and account number.
+
+Use the following steps to complete this section of the exercise:
+
+1. Open the Customer.cs file
+
+1. Add a second constructor that accepts parameters for the customers first and last name.
+
+1. Add local variables to the constructor, assigning the values passed into the constructor.
+
+1. Update the `Console.WriteLine()` message to include the customer name.
+
+1. Switch to the Program.cs file
+
+1. Create a string variable named `firstName`. Assign a value of “Jane” to `firstName`.
+
+1. Create a second instance of the Customer class that uses the new constructor.
+
+1. Run the app
+
+1. In the Customer.cs file, add a third constructor that accepts first and last names.
 
 1. Add local variables to the constructor, assigning the values that are passed into the constructor to the first and last name variables.
 
-1. In the Program.cs file, create a third instance of the Person class that uses the new constructor.
+1. In the Program.cs file, create a third instance of the Customer class that uses the new constructor.
+
+1. Take a minute to review your code.
+
+    ```csharp
+
+    
+    ```
 
 1. Run the app
 
-## Task 3: Implement instance and static constructors
+1. Review the output in the terminal window.
+
+    You should see the following output:
+
+    ```plaintext
+
+    ```
+
+## Task 3: Create an `Account` class with instance constructors
+
+In this task, you create an `Account` class that includes instance constructors that accept parameters for the account number, account type, and balance.
 
 Use the following steps to complete this section of the exercise:
 
-1. In the Person.cs file, ...
+1. Use the Command Palette to create a class named `Account`.
+
+1. next step
+
+1. next step
+
+1. next step
+
+1. Take a minute to review your code.
+
+    ```csharp
+
+    
+    ```
+
+1. Run the app
+
+1. Review the output in the terminal window.
+
+    You should see the following output:
+
+    ```plaintext
+
+    ```
+
+## Task 4: Implement static constructors for the `Account` class
+
+In this task, you create a static constructor for the `Account` class that initializes a static field.
+
+Use the following steps to complete this section of the exercise:
+
+1. In the Account.cs file, ...
+
+1. next step
+
+1. next step
+
+1. next step
+
+1. Take a minute to review your code.
+
+    ```csharp
+
+    
+    ```
+
+1. Run the app
+
+1. Review the output in the terminal window.
+
+    You should see the following output:
+
+    ```plaintext
+
+    ```
 
 ## Clean up
 
