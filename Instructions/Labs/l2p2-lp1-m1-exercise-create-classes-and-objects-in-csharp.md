@@ -21,9 +21,11 @@ This exercise should take approximately **15** minutes to complete.
 
 Before you can start this exercise, you will need to...
 
-1. Ensure that you have the latest LTS version of the .NET SDK installed on your computer.
-1. Ensure that you have Visual Studio installed on your computer.
-1. Ensure that you have the C# Dev Kit configure in Visual Studio Code.
+1. Ensure that you have the latest LTS version of the .NET SDK installed on your computer. You can download the latest version of the .NET SDK from the following URL: [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
+1. Ensure that you have Visual Studio Code installed on your computer. You can download Visual Studio Code from the following URL: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+1. Ensure that you have the C# Dev Kit configured in Visual Studio Code.
+
+For addition help configuring the Visual Studio Code environment, see [https://learn.microsoft.com/en-us/training/modules/install-configure-visual-studio-code/](https://learn.microsoft.com/en-us/training/modules/install-configure-visual-studio-code/)
 
 ## Task 1: Create a console app and a class file for the `Person` class
 
