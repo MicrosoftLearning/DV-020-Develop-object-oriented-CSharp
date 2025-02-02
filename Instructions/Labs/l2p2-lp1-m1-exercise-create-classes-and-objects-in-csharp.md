@@ -5,9 +5,9 @@ lab:
 ---
 
 
-# Create classes and objects in CSharp
+# Create classes and objects in C#
 
-Classes are the building blocks of object-oriented programming in C#. In this exercise, you create a console app that uses class definitions to instantiate objects using the `new` operator.
+Classes are the building blocks of object-oriented programming. In this exercise, you create a console app that uses class definitions to instantiate objects using the `new` operator.
 
 This exercise takes approximately **15** minutes to complete.
 
