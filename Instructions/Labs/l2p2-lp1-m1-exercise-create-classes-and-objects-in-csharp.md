@@ -27,19 +27,19 @@ Suppose you're helping a non-profit company with a software project. You have ex
 
 This exercise includes the following tasks:
 
-1. Create a console app and `Customer` class
+1. Create a console app and a class named "Customer"
 
-1. Create instance constructors for the `Customer` class
+1. Create instance constructors for the "Customer" class
 
-1. Create an `Account` class with instance constructors
+1. Create a class named "Account" that includes instance constructors
 
-1. Implement static constructors for the `Account` class
+1. Implement static constructors for the "Account" class.
 
 ## Task 1: Create a console app and `Customer` class
 
-In this task, you create a console app, add a `Customer` class to the project, and then create class definition for the `Customer` class that includes public fields and a parameterless constructor.
+In this task, you create a console app, add a `Customer` class to the project, and then create a class definition for the `Customer` class. The class definition includes public fields and a parameterless constructor.
 
-Use the following steps to complete this section of the exercise:
+Use the following steps to complete this task:
 
 1. Open Visual Studio Code.
 
@@ -84,7 +84,7 @@ Use the following steps to complete this section of the exercise:
 
 In this task, you create additional instance constructors for the `Customer` class that accept parameters for the first name, last name, and account number.
 
-Use the following steps to complete this section of the exercise:
+Use the following steps to complete this task:
 
 1. Open the Customer.cs file
 
@@ -129,7 +129,7 @@ Use the following steps to complete this section of the exercise:
 
 In this task, you create an `Account` class that includes instance constructors that accept parameters for the account number, account type, and balance.
 
-Use the following steps to complete this section of the exercise:
+Use the following steps to complete this task:
 
 1. Use the Command Palette to create a class named `Account`.
 
@@ -160,7 +160,7 @@ Use the following steps to complete this section of the exercise:
 
 In this task, you create a static constructor for the `Account` class that initializes a static field.
 
-Use the following steps to complete this section of the exercise:
+Use the following steps to complete this task:
 
 1. In the Account.cs file, ...
 
