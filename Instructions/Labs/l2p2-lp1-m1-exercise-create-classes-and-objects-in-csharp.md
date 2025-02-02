@@ -209,8 +209,7 @@ Use the following steps to complete this task:
 
     ```csharp
 
-    string firstName = "Jane";
-    Customer customer2 = new Customer(firstName, "Doe");
+    Customer customer2 = new Customer("John", "Doe");
 
     ```
 
@@ -226,8 +225,7 @@ Use the following steps to complete this task:
     
     Customer customer1 = new Customer();
 
-    string firstName = "Jane";
-    Customer customer2 = new Customer(firstName, "Doe");
+    Customer customer2 = new Customer("John", "Doe");
     
     ```
 
@@ -284,43 +282,180 @@ Use the following steps to complete this task:
     ```plaintext
 
     Customer created
-    Customer created with name: Jane Doe
+    Customer created with name: John Doe
 
     ```
 
 ## Task 2: Add public fields and updated constructors to the "Customer" class
 
-In this task, you add public fields to the `Customer` class, update the instance constructors with an additional parameters, and then update the Program.cs file to access each object's public data.
+In this task, you add public fields to the `Customer` class, update the instance constructors to use additional parameters, and then update the Program.cs file to access each object's public data.
 
 Use the following steps to complete this task:
 
-1. Open the Customer.cs file
+1. Open the Customer.cs file.
 
-1. Add a second constructor that accepts parameters for the customers first and last name.
+1. Add public fields to the class definition for `fName`, `lName`, and `accNumber`. Initialize the fields using default values.
 
-1. Add local variables to the constructor, assigning the values passed into the constructor.
+    ```csharp
 
-1. Update the `Console.WriteLine()` message to include the customer name.
+    public string fName = "unknown";
+    public string lName = "unknown";
+    public int accNumber = 0;
+
+    ```
+
+1. Update the second constructor to assign constructor parameters to the local variables.
+
+    ```csharp
+
+    public Customer(string firstName, string lastName)
+    {
+        fName = firstName;
+        lName = lastName;
+
+    ```
+
+1. Update the `Console.WriteLine()` messages in both constructors to use the values stored in data fields.
+
+    ```csharp
+
+    public Customer()
+    {
+        Console.WriteLine($"Customer created: {fName} {lName}");
+    }
+
+    public Customer(string firstName, string lastName)
+    {
+        fName = firstName;
+        lName = lastName;
+
+        Console.WriteLine($"Customer created: {fName} {lName}");
+    }
+
+    ```
 
 1. Switch to the Program.cs file
 
-1. Create a string variable named `firstName`. Assign a value of “Jane” to `firstName`.
+1. Create local variables for `firstName`, `lastName`, and `accountNumber`. .
 
-1. Create a second instance of the Customer class that uses the new constructor.
+    ```csharp
 
-1. Run the app
+    string firstName = "John";
+    string lastName = "Doe";
+    string accountNumber = "12345";
 
-1. In the Customer.cs file, add a third constructor that accepts first and last names.
+    ```
 
-1. Add local variables to the constructor, assigning the values that are passed into the constructor to the first and last name variables.
+1. Update the code that creates the second instance of the `Customer` class to use local variables.
+
+    ```csharp
+
+    firstName = "Jane";
+    Customer customer2 = new Customer(firstName, lastName);
+    ```
+
+1. Add code that 
+1. Review the code.
+
+    Program.cs file:
+
+    ```csharp
+
+    using Classes_M1;
+
+    namespace Classes_M1;
+
+    string firstName = "John";
+    string lastName = "Doe";
+    string accountNumber = "12345";
+
+    Customer customer = new Customer();
+
+    string firstName = "Jane";
+    Customer customer2 = new Customer(firstName, lastName);
+
+    ```
+
+    Customer.cs file:
+
+    ```csharp
+
+    using System;
+
+    namespace Classes_M1
+    {
+        public class Customer
+        {
+            public string fName = "unknown";
+            public string lName = "unknown";
+            public int accNumber = 0;
+
+            public Customer()
+            {
+                Console.WriteLine($"Customer created: {fName} {lName}");
+            }
+
+            public Customer(string firstName, string lastName)
+            {
+                fName = firstName;
+                lName = lastName;
+
+                Console.WriteLine($"Customer created: {fName} {lName}");
+            }
+        }
+    }
+
+    ```
+
+1. Run your updated app and verify that you get the following output:
+
+    ```plaintext
+
+    Customer created: unknown unknown
+    Customer created: Jane Doe
+
+    ```
+
+1. In the Customer.cs file, create a new instance constructor that accepts parameters for the first name, last name, and account number.
+
+    ```csharp
+
+    public Customer(string firstName, string lastName, int accountNumber)
+    {
+        fName = firstName;
+        lName = lastName;
+        accNumber = accountNumber;
+
+        Console.WriteLine($"Customer created. Name: {fName} {lName}, Account: {accNumber}");
+    }
+
+    ```
+
+1. Update the `Console.WriteLine()` messages in the first two constructors to match the message in the third constructor.
 
 1. In the Program.cs file, create a third instance of the Customer class that uses the new constructor.
 
+    ```csharp
+
+
+
+    ```
+
 1. Take a minute to review your code.
+
+    Program.cs file:
 
     ```csharp
 
     
+    ```
+
+    Customer.cs file:
+
+    ```csharp
+
+
+
     ```
 
 1. Run the app
