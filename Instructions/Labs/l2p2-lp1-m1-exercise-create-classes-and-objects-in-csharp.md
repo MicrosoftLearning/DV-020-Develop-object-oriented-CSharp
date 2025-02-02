@@ -7,7 +7,23 @@ lab:
 
 # Create classes and objects in CSharp
 
-In this exercise, you create a console app that uses class definitions to instantiate objects using the `new` operator.
+Classes are the building blocks of object-oriented programming in C#. In this exercise, you create a console app that uses class definitions to instantiate objects using the `new` operator.
+
+This exercise takes approximately **15** minutes to complete.
+
+## Before you start
+
+Before you can start this exercise, you need to:
+
+1. Ensure that you have the latest LTS version of the .NET SDK installed on your computer. You can download the latest versions of the .NET SDK using the following URL: [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
+1. Ensure that you have Visual Studio Code installed on your computer. You can download Visual Studio Code using the following URL: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+1. Ensure that you have the C# Dev Kit configured in Visual Studio Code.
+
+For addition help configuring the Visual Studio Code environment, see [Install and configure Visual Studio Code for C# development](https://learn.microsoft.com/training/modules/install-configure-visual-studio-code/)
+
+## Exercise scenario
+
+Suppose you're helping a non-profit company with a software project. You have experience creating structured apps in C#, but no experience with object-oriented programming. You need to gain experience before starting work on the company software. You decide to create a simple banking app that includes `Customer` and `Account` classes.
 
 This exercise includes the following tasks:
 
@@ -18,18 +34,6 @@ This exercise includes the following tasks:
 1. Create an `Account` class with instance constructors
 
 1. Implement static constructors for the `Account` class
-
-This exercise should take approximately **15** minutes to complete.
-
-## Before you start
-
-Before you can start this exercise, you need to:
-
-1. Ensure that you have the latest LTS version of the .NET SDK installed on your computer. You can download the latest version of the .NET SDK from the following URL: [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
-1. Ensure that you have Visual Studio Code installed on your computer. You can download Visual Studio Code from the following URL: [https://code.visualstudio.com/](https://code.visualstudio.com/)
-1. Ensure that you have the C# Dev Kit configured in Visual Studio Code.
-
-For addition help configuring the Visual Studio Code environment, see [https://learn.microsoft.com/en-us/training/modules/install-configure-visual-studio-code/](https://learn.microsoft.com/en-us/training/modules/install-configure-visual-studio-code/)
 
 ## Task 1: Create a console app and `Customer` class
 
