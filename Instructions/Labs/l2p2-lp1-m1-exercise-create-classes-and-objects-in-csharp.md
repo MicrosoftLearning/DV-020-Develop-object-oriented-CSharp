@@ -23,21 +23,19 @@ For addition help configuring the Visual Studio Code environment, see [Install a
 
 ## Exercise scenario
 
-Suppose you're helping a non-profit company with a software project. You have experience creating structured apps in C#, but no experience with object-oriented programming. You need to gain experience before starting work on the company software. You decide to create a simple banking app that includes "Customer" and "Account" classes.
+Suppose you're helping a non-profit company with a software project. You have experience creating structured apps in C#, but no experience with object-oriented programming. You need to gain experience before starting work on the company software. You decide to create a simple banking app that includes "BankCustomer" and "BankAccount" classes.
 
 This exercise includes the following tasks:
 
-1. Create a console app and a class named "Customer"
+1. Create a console app and a class named "BankCustomer"
+1. Update the Program.cs file to create instances of the "BankCustomer" class
+1. Add public fields and updated constructors to the "BankCustomer" class
+1. Update the "BankCustomer" class using static members to ensure unique customer IDs
+1. Create a class named "BankAccount" that implements static members
 
-1. Add public fields and updated constructors to the "Customer" class
+## Create a console app and a class named "BankCustomer"
 
-1. Create a class named "Account" that includes instance constructors
-
-1. Implement static constructors for the "Account" class
-
-## Task 1: Create a console app and a class named "Customer"
-
-In this task, you create a new console app, add a `Customer` class to the project, and then create a class definition for the `Customer` class. The class definition includes public fields and a parameterless constructor.
+In this task, you create a new console app, add a `BankCustomer` class to the project, and then create a class definition for the `BankCustomer` class. The class definition includes public fields and a parameterless constructor.
 
 Use the following steps to complete this task:
 
@@ -95,9 +93,9 @@ Use the following steps to complete this task:
 
 1. Right-click the **Classes_M1** project, and then select **New File**.
 
-1. In the **Create a new file** dropdown, to create a class file named Customer.cs, select **Class** and then enter **Customer**.
+1. In the **Create a new file** dropdown, to create a class file named BankCustomer.cs, select **Class** and then enter **BankCustomer**.
 
-    You should see a new file named **Customer.cs** in the Visual Studio Code editor. The file should be located in the **Classes_M1** project folder, and the code should look similar to the following code snippet:
+    You should see a new file named **BankCustomer.cs** in the Visual Studio Code editor. The file should be located in the **Classes_M1** project folder, and the code should look similar to the following code snippet:
 
     ```csharp
 
@@ -105,87 +103,93 @@ Use the following steps to complete this task:
 
     namespace Classes_M1;
 
-    class Customer
+    class BankCustomer
     {
     
     }
 
     ```
 
-    At this point, your `Customer` class definition is empty. You'll add constructors and fields to the class during this task.
+    At this point, your `BankCustomer` class definition is empty. You'll add constructors and fields to the class during this task.
 
 1. Notice that a `Classes_M1` namespace is specified.
 
-    A namespace is a way to organize code in C#. It provides a way to group related classes and other types into a single unit. You can use this namespace to access the `Customer` class from other classes in the project.
+    A namespace is a way to organize code in C#. It provides a way to group related classes and other types into a single unit. You can use this namespace to access the `BankCustomer` class from other classes in the project.
 
-1. To create a constructor for the `Customer` class, add the following code to your `Customer` class definition:
+1. To create a constructor for the `BankCustomer` class, add the following code to your `BankCustomer` class definition:
 
     ```csharp
 
-    public Customer()
+    public BankCustomer()
     {
-        Console.WriteLine("Customer created");
+        Console.WriteLine("BankCustomer created");
     }
 
     ```
 
-    The `Customer` class now includes a parameterless constructor that writes a message to the console when a new instance of the `Customer` class is created.
+    The `BankCustomer` class now includes a parameterless constructor that writes a message to the console when a new instance of the `BankCustomer` class is created.
 
-1. Your updated `Customer` class should now look like the following code snippet:
+1. Your updated `BankCustomer` class should now look like the following code snippet:
 
     ```csharp
 
-    public class Customer
+    public class BankCustomer
     {
-        public Customer()
+        public BankCustomer()
         {
-            Console.WriteLine("Customer created");
+            Console.WriteLine("BankCustomer created");
         }
     }
 
     ```
 
-1. To create a second constructor that accepts parameters for the customer's first and last name, add the following code to your `Customer` class definition:
+1. To create a second constructor that accepts parameters for the bank customer's first and last name, add the following code to your `BankCustomer` class definition:
 
     ```csharp
 
-    public Customer(string firstName, string lastName)
+    public BankCustomer(string firstName, string lastName)
     {
-        Console.WriteLine($"Customer created with name: {firstName} {lastName}");
+        Console.WriteLine($"BankCustomer created: {firstName} {lastName}");
     }
 
     ```
 
-    The `Customer` class now includes a second constructor that accepts parameters for the customer's first and last name. The constructor writes a message to the console that includes the customer's first and last name when a new instance of the `Customer` class is created.
+    The `BankCustomer` class now includes a second constructor that accepts parameters for the customer's first and last name. The constructor writes a message to the console that includes the customer's first and last name when a new instance of the `BankCustomer` class is created.
 
-1. Your updated `Customer` class should now look like the following code snippet:
+1. Your updated `BankCustomer` class should now look like the following code snippet:
 
     ```csharp
 
-    public class Customer
+    public class BankCustomer
     {
-        public Customer()
+        public BankCustomer()
         {
-            Console.WriteLine("Customer created");
+            Console.WriteLine("BankCustomer created");
         }
 
-        public Customer(string firstName, string lastName)
+        public BankCustomer(string firstName, string lastName)
         {
-            Console.WriteLine($"Customer created with name: {firstName} {lastName}");
+            Console.WriteLine($"BankCustomer created: {firstName} {lastName}");
         }
     }
 
     ```
+
+## Update the Program.cs file to create instances of the "BankCustomer" class
+
+In this task, you update the Program.cs file to create instances of the `BankCustomer` class and run the app to verify that the instances are created successfully.
+
+Use the following steps to complete this task:
 
 1. Switch to the Program.cs file
 
-    The Program.cs file is where you write the code that creates instances of the `Customer` class.
+    The Program.cs file is where you write the code that creates instances of the `BankCustomer` class.
 
-1. In the Program.cs file, add the following code to create an instance of the `Customer` class:
+1. In the Program.cs file, add the following code to create an instance of the `BankCustomer` class:
 
     At this point, the Program.cs file should be empty. If the "hello, world" code is still present, delete it now.
 
-1. Add a `using` statement that specifies the namespace defined by the customer `Customer` class.
+1. Add a `using` statement that specifies the namespace defined by the customer `BankCustomer` class.
 
     ```csharp
 
@@ -193,29 +197,29 @@ Use the following steps to complete this task:
 
     ```
 
-    This `using` statement allows you to access the `Customer` class from within the Program.cs file.
+    This `using` statement allows you to access the `BankCustomer` class from within the Program.cs file.
 
-1. To create an instance of the `Customer` class, add the following code to the Program.cs file:
-
-    ```csharp
-
-    Customer customer = new Customer();
-
-    ```
-
-    The `new` operator is used to create a new instance of the `Customer` class. The `Customer` class constructor is called when the new instance is created.
-
-1. To create a second instance of the `Customer` class that uses the new constructor, add the following code to the Program.cs file:
+1. To create an instance of the `BankCustomer` class, add the following code to the Program.cs file:
 
     ```csharp
 
-    Customer customer2 = new Customer("John", "Doe");
+    BankCustomer bankCustomer1 = new BankCustomer();
 
     ```
 
-    The `Customer` class constructor that accepts parameters for the customer's first and last name is called when the new instance is created. The constructor writes a message to the console that includes the customer's first and last name.
+    The `new` operator is used to create a new instance of the `BankCustomer` class. The `BankCustomer` class constructor is called when the new instance is created.
 
-1. Take a minute to review your code.
+1. To create a second instance of the `BankCustomer` class that uses the new constructor, add the following code to the Program.cs file:
+
+    ```csharp
+
+    BankCustomer bankCustomer2 = new BankCustomer("John", "Doe");
+
+    ```
+
+    The `BankCustomer` class constructor that accepts parameters for the customer's first and last name is called when the new instance is created. The constructor writes a message to the console that includes the customer's first and last name.
+
+1. Take a minute to your Program.cs and BankCustomer.cs files.
 
     Program.cs file:
 
@@ -223,13 +227,13 @@ Use the following steps to complete this task:
 
     using Classes_M1;
     
-    Customer customer1 = new Customer();
+    BankCustomer customer1 = new BankCustomer();
 
-    Customer customer2 = new Customer("John", "Doe");
+    BankCustomer customer2 = new BankCustomer("John", "Doe");
     
     ```
 
-    Customer.cs file:
+    BankCustomer.cs file:
 
     ```csharp
 
@@ -237,16 +241,16 @@ Use the following steps to complete this task:
 
     namespace Classes_M1;
 
-    public class Customer
+    public class BankCustomer
     {
-        public Customer()
+        public BankCustomer()
         {
-            Console.WriteLine("Customer created");
+            Console.WriteLine("BankCustomer created");
         }
 
-        public Customer(string firstName, string lastName)
+        public BankCustomer(string firstName, string lastName)
         {
-            Console.WriteLine($"Customer created with name: {firstName} {lastName}");
+            Console.WriteLine($"BankCustomer created: {firstName} {lastName}");
         }
     }
 
@@ -281,26 +285,26 @@ Use the following steps to complete this task:
 
     ```plaintext
 
-    Customer created
-    Customer created with name: John Doe
+    BankCustomer created
+    BankCustomer created: John Doe
 
     ```
 
-## Task 2: Add public fields and updated constructors to the "Customer" class
+## Add public fields and updated constructors to the "BankCustomer" class
 
-In this task, you add public fields to the `Customer` class, update the instance constructors to use additional parameters, and then update the Program.cs file to access each object's public data.
+In this task, you add public fields to the `BankCustomer` class, update the instance constructors to use additional parameters, and then update the Program.cs file to access each object's public data.
 
 Use the following steps to complete this task:
 
-1. Open the Customer.cs file.
+1. Open the BankCustomer.cs file.
 
 1. Add public fields to the class definition for `fName`, `lName`, and `accNumber`. Initialize the fields using default values.
 
     ```csharp
 
-    public string fName = "unknown";
-    public string lName = "unknown";
-    public int accNumber = 0;
+    public string fName = "John";
+    public string lName = "Doe";
+    public string accountId = "1010101010";
 
     ```
 
@@ -308,28 +312,29 @@ Use the following steps to complete this task:
 
     ```csharp
 
-    public Customer(string firstName, string lastName)
+    public BankCustomer(string firstName, string lastName)
     {
         fName = firstName;
         lName = lastName;
 
     ```
 
-1. Update the `Console.WriteLine()` messages in both constructors to use the values stored in data fields.
+1. Delete the `Console.WriteLine()` messages from the constructors.
+
+    You the update the Program.cs file to display the data using the public fields. The updated constructors should be similar to the following code snippet:
 
     ```csharp
 
-    public Customer()
+    public BankCustomer()
     {
-        Console.WriteLine($"Customer created: {fName} {lName}");
+
     }
 
-    public Customer(string firstName, string lastName)
+    public BankCustomer(string firstName, string lastName)
     {
         fName = firstName;
         lName = lastName;
 
-        Console.WriteLine($"Customer created: {fName} {lName}");
     }
 
     ```
@@ -342,20 +347,40 @@ Use the following steps to complete this task:
 
     string firstName = "John";
     string lastName = "Doe";
-    string accountNumber = "12345";
+    string customerIdNumber = "1010101010";
 
     ```
 
-1. Update the code that creates the second instance of the `Customer` class to use local variables.
+1. Update the code that creates the second instance of the `BankCustomer` class to use local variables.
 
     ```csharp
 
     firstName = "Jane";
-    Customer customer2 = new Customer(firstName, lastName);
+    BankCustomer customer2 = new BankCustomer(firstName, lastName);
     ```
 
-1. Add code that 
-1. Review the code.
+1. Add code that creates a third instance of the `BankCustomer` class using the third constructor.
+
+    ```csharp
+
+    firstName = "Leonardo";
+    lastName = "Rossi";
+    accountId = "2020202020";
+    BankCustomer customer3 = new BankCustomer(firstName, lastName, customerIdNumber);
+
+    ```
+
+1. Add `Console.WriteLine` statements that uses the objects to display the public data fields.
+
+    ```csharp
+
+    Console.WriteLine($"BankCustomer 1: {customer1.fName} {customer1.lName} {customer1.customerId}");
+    Console.WriteLine($"BankCustomer 2: {customer2.fName} {customer2.lName} {customer2.customerId}");
+    Console.WriteLine($"BankCustomer 3: {customer3.fName} {customer3.lName} {customer3.customerId}");
+
+    ```
+
+1. Take a minute to review your updated code files.
 
     Program.cs file:
 
@@ -367,41 +392,57 @@ Use the following steps to complete this task:
 
     string firstName = "John";
     string lastName = "Doe";
-    string accountNumber = "12345";
+    string customerIdNumber = "1010101010";
+    
+    BankCustomer customer1 = new BankCustomer();
+    
+    firstName = "Jane";
+    BankCustomer customer2 = new BankCustomer(firstName, lastName);
+    
+    firstName = "Leonardo";
+    lastName = "Rossi";
+    customerIdNumber = "2020202020";
+    BankCustomer customer3 = new BankCustomer(firstName, lastName, customerIdNumber);
+    
+    Console.WriteLine($"BankCustomer 1: {customer1.fName} {customer1.lName} {customer1.customerId}");
+    Console.WriteLine($"BankCustomer 2: {customer2.fName} {customer2.lName} {customer2.customerId}");
+    Console.WriteLine($"BankCustomer 3: {customer3.fName} {customer3.lName} {customer3.customerId}");
 
-    Customer customer = new Customer();
-
-    string firstName = "Jane";
-    Customer customer2 = new Customer(firstName, lastName);
 
     ```
 
-    Customer.cs file:
+    BankCustomer.cs file:
 
     ```csharp
 
     using System;
 
-    namespace Classes_M1
+    namespace Classes_M1;
+
+    public class BankCustomer
     {
-        public class Customer
+        // add public fields for fName, lName, and accountID
+        public string fName = "John";
+        public string lName = "Doe";
+        public string customerId = "1010101010";
+    
+        public BankCustomer()
         {
-            public string fName = "unknown";
-            public string lName = "unknown";
-            public int accNumber = 0;
-
-            public Customer()
-            {
-                Console.WriteLine($"Customer created: {fName} {lName}");
-            }
-
-            public Customer(string firstName, string lastName)
-            {
-                fName = firstName;
-                lName = lastName;
-
-                Console.WriteLine($"Customer created: {fName} {lName}");
-            }
+    
+        }
+    
+        public BankCustomer(string firstName, string lastName)
+        {
+            fName = firstName;
+            lName = lastName;
+    
+        }
+    
+        public BankCustomer(string firstName, string lastName, string customerIdNumber)
+        {
+            fName = firstName;
+            lName = lastName;
+            customerId = customerIdNumber;
         }
     }
 
@@ -411,127 +452,109 @@ Use the following steps to complete this task:
 
     ```plaintext
 
-    Customer created: unknown unknown
-    Customer created: Jane Doe
+    BankCustomer 1: John Doe 1010101010
+    BankCustomer 2: Jane Doe 1010101010
+    BankCustomer 3: Leonardo Rossi 2020202020
 
     ```
 
-1. In the Customer.cs file, create a new instance constructor that accepts parameters for the first name, last name, and account number.
+    Notice customer1 and customer2 share the same ID number. The public fields are initialized with default values. Although the constructors update the fields with the values passed as parameters, there are clearly some issues to address.
 
-    ```csharp
+## Update the "BankCustomer" class using static members to ensure unique customer IDs
 
-    public Customer(string firstName, string lastName, int accountNumber)
-    {
-        fName = firstName;
-        lName = lastName;
-        accNumber = accountNumber;
-
-        Console.WriteLine($"Customer created. Name: {fName} {lName}, Account: {accNumber}");
-    }
-
-    ```
-
-1. Update the `Console.WriteLine()` messages in the first two constructors to match the message in the third constructor.
-
-1. In the Program.cs file, create a third instance of the Customer class that uses the new constructor.
-
-    ```csharp
-
-
-
-    ```
-
-1. Take a minute to review your code.
-
-    Program.cs file:
-
-    ```csharp
-
-    
-    ```
-
-    Customer.cs file:
-
-    ```csharp
-
-
-
-    ```
-
-1. Run the app
-
-1. Review the output in the terminal window.
-
-    You should see the following output:
-
-    ```plaintext
-
-    ```
-
-## Task 3: Create a class named "Account" that includes instance constructors
-
-In this task, you create an `Account` class that includes instance constructors that accept parameters for the account number, account type, and balance.
+In this task, you update the `BankCustomer` class using a static field and static constructor to ensure unique `customerId` values are assigned to each new customer object.
 
 Use the following steps to complete this task:
 
-1. Use the Command Palette to create a class named `Account`.
+1. Use the **Classes_M1** project to create a class named `BankAccount`.
+
+1. Open the `BankCustomer`class.
 
 1. next step
 
 1. next step
 
-1. next step
-
-1. Take a minute to review your code.
+1. Take a minute to review the updated Program.cs and Customer.cs files.
 
     Program.cs file:
 
     ```csharp
 
-    using System;
     using Classes_M1;
 
-    namespace Classes_M1
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                Customer customer = new Customer();
-                string firstName = "Jane";
-                Customer customer2 = new Customer(firstName, "Doe");
-                Customer customer3 = new Customer("John", "Smith");
-
-            }
-        }
-    }
+    string firstName = "John";
+    string lastName = "Doe";
+    int accountNumber = 0;
+    
+    BankCustomer customer1 = new BankCustomer();
+    
+    firstName = "Jane";
+    BankCustomer customer2 = new BankCustomer(firstName, lastName);
+    
+    firstName = "Leonardo";
+    lastName = "Rossi";
+    accountNumber = 12345;
+    BankCustomer customer3 = new BankCustomer(firstName, lastName, accountNumber);
+    
+    Console.WriteLine($"BankCustomer 1: {customer1.fName} {customer1.lName} {customer1.accNumber}");
+    Console.WriteLine($"BankCustomer 2: {customer2.fName} {customer2.lName} {customer2.accNumber}");
+    Console.WriteLine($"BankCustomer 3: {customer3.fName} {customer3.lName} {customer3.accNumber}");
+    
     
     ```
 
+    BankCustomer.cs file:
 
     ```csharp
 
-
+    public class BankCustomer
+    {
+        private static int nextCustomerId;
+        public string fName = "John";
+        public string lName = "Doe";
+        public readonly string customerId;
     
+        static BankCustomer()
+        {
+            Random random = new Random();
+            nextCustomerId = random.Next(10000000, 20000000);
+        }
+    
+        public BankCustomer()
+        {
+            this.customerId = (nextCustomerId++).ToString("D10");
+        }
+    
+        public BankCustomer(string firstName, string lastName)
+        {
+            fName = firstName;
+            lName = lastName;
+            this.customerId = (nextCustomerId++).ToString("D10");
+        }
+    
+        public BankCustomer(string firstName, string lastName, string customerIdNumber)
+        {
+            fName = firstName;
+            lName = lastName;
+            customerId = customerIdNumber;
+        }
+    }
+
     ```
 
-1. Run the app
+## Create a class named "BankAccount" that implements static members
 
-1. Review the output in the terminal window.
-
-    You should see the following output:
-
-    ```plaintext
-
-    ```
-
-## Task 4: Implement static constructors for the "Account" class
-
-In this task, you create a static constructor for the `Account` class that initializes a static field.
+In this task, you create an `BankAccount` class that initializes the interest rate as a static field.
 
 Use the following steps to complete this task:
 
-1. In the Account.cs file, ...
+1. Use the **Classes_M1** project to create a class named `BankAccount`.
+
+1. Create public fields for `accountNumber`, `balance`, `interestRate`, and `accountType`. Initialize the fields using default values.
+
+1. Add a static field named `nextAccountNumber` to the `BankAccount` class. Initialize the field.
+
+1. next step
 
 1. next step
 
@@ -541,9 +564,103 @@ Use the following steps to complete this task:
 
 1. Take a minute to review your code.
 
+    Program.cs file:
+
     ```csharp
 
+    using Classes_M1;
+
+    string firstName = "John";
+    string lastName = "Doe";
+    int accountNumber = 0;
     
+    BankCustomer customer1 = new BankCustomer();
+    
+    firstName = "Jane";
+    BankCustomer customer2 = new BankCustomer(firstName, lastName);
+    
+    firstName = "Leonardo";
+    lastName = "Rossi";
+    accountNumber = 12345;
+    BankCustomer customer3 = new BankCustomer(firstName, lastName, accountNumber);
+    
+    Console.WriteLine($"BankCustomer 1: {customer1.fName} {customer1.lName} {customer1.accNumber}");
+    Console.WriteLine($"BankCustomer 2: {customer2.fName} {customer2.lName} {customer2.accNumber}");
+    Console.WriteLine($"BankCustomer 3: {customer3.fName} {customer3.lName} {customer3.accNumber}");
+    
+    // create an account for customer 3
+    BankAccount bankAccount1 = new BankAccount(customer3.accNumber, 500, "Checking");
+    
+    Console.WriteLine($"BankAccount 1: Account # {bankAccount1.accountNumber}, type {bankAccount1.accountType}, ballance {bankAccount1.balance}, rate {BankAccount.interestRate}");
+    
+    ```
+
+    BankCustomer.cs file:
+
+    ```csharp
+
+    public class BankCustomer
+    {
+        private static int nextCustomerId;
+        public string fName = "John";
+        public string lName = "Doe";
+        public readonly string customerId;
+    
+        static BankCustomer()
+        {
+            Random random = new Random();
+            nextCustomerId = random.Next(10000000, 20000000);
+        }
+    
+        public BankCustomer()
+        {
+            this.customerId = (nextCustomerId++).ToString("D10");
+        }
+    
+        public BankCustomer(string firstName, string lastName)
+        {
+            fName = firstName;
+            lName = lastName;
+            this.customerId = (nextCustomerId++).ToString("D10");
+        }
+    
+        public BankCustomer(string firstName, string lastName, string customerIdNumber)
+        {
+            fName = firstName;
+            lName = lastName;
+            customerId = customerIdNumber;
+        }
+    }
+
+    ```
+
+    BankAccount.cs file:
+
+    ```csharp
+
+    public class BankAccount
+    {
+        private static int nextAccountNumber = 1;
+        public int accountNumber;
+        public double balance = 0;
+        public static double interestRate = 0;
+        public string accountType = "Checking";
+    
+        public BankAccount()
+        {
+            this.accountNumber = nextAccountNumber++;
+            Console.WriteLine($"BankAccount created: account# {accountNumber}, balance {balance}, rate {interestRate}, type {accountType}");
+        }
+    
+        public BankAccount(double balance, string accountType)
+        {
+            this.accountNumber = nextAccountNumber++;
+            this.balance = balance;
+            this.accountType = accountType;
+            Console.WriteLine($"BankAccount created: account# {accountNumber}, balance {balance}, rate {interestRate}, type {accountType}");
+        }
+    }
+
     ```
 
 1. Run the app
@@ -553,6 +670,13 @@ Use the following steps to complete this task:
     You should see the following output:
 
     ```plaintext
+
+    BankCustomer 1: John Doe 0014653176
+    BankCustomer 2: Jane Doe 0014653177
+    BankCustomer 3: Leonardo Rossi 0014653178
+    Account 1: Account # 12885967, type Checking, balance 0, rate 0, customer ID 0014653176
+    Account 2: Account # 12885968, type Checking, balance 1500, rate 0, customer ID 0014653177
+    Account 3: Account # 12885969, type Checking, balance 2500, rate 0, customer ID 0014653178
 
     ```
 
