@@ -7,15 +7,17 @@ lab:
 
 # Create classes and objects in C#
 
-Classes are the building blocks of object-oriented programming. In this exercise, you create a console app that uses class definitions to instantiate objects using the `new` operator.
+A class is a blueprint for creating objects and objects are the building-blocks that make up a program. In C#, you define classes using the `class` keyword. You can create objects from a class using the `new` operator. Each object created from a class is an instance of that class.
 
-This exercise takes approximately **15** minutes to complete.
+In this exercise, you create a console app that uses class definitions to instantiate objects.
+
+This exercise takes approximately **25** minutes to complete.
 
 ## Before you start
 
 Before you can start this exercise, you need to:
 
-1. Ensure that you have the latest LTS version of the .NET SDK installed on your computer. You can download the latest versions of the .NET SDK using the following URL: [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
+1. Ensure that you have the latest short term support (STS) version of the .NET SDK installed on your computer. You can download the latest versions of the .NET SDK using the following URL: [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
 1. Ensure that you have Visual Studio Code installed on your computer. You can download Visual Studio Code using the following URL: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 1. Ensure that you have the C# Dev Kit configured in Visual Studio Code.
 
@@ -27,13 +29,13 @@ Suppose you're helping a non-profit company with a software project. You have ex
 
 This exercise includes the following tasks:
 
-1. Create a console app and a class named "BankCustomer"
-1. Update the Program.cs file to create instances of the "BankCustomer" class
-1. Add public fields and updated constructors to the "BankCustomer" class
-1. Update the "BankCustomer" class using static members to ensure unique customer IDs
-1. Create a class named "BankAccount" that implements static members
+1. Create a console app and a class named **BankCustomer**.
+1. Update the Program.cs file to create instances of the **BankCustomer** class.
+1. Add public fields and updated constructors to the BankCustomer class.
+1. Update the BankCustomer class using static members to ensure unique customer IDs.
+1. Create a class named BankAccount that implements static members.
 
-## Create a console app and a class named "BankCustomer"
+## Create a console app and a class named BankCustomer
 
 In this task, you create a new console app, add a `BankCustomer` class to the project, and then create a class definition for the `BankCustomer` class. The class definition includes public fields and a parameterless constructor.
 
@@ -52,12 +54,14 @@ Use the following steps to complete this task:
 
 1. Use the Command Palette to create a new console app named **Classes_M1**.
 
+    For example:
+
     1. To open the Command Palette, press **Ctrl+Shift+P**.
     1. In the Command Palette, type **.NET:** and then select **.NET: New Project**.
-    1. In the **Create a new .NET Project** box, select **Console App**.
-    1. In the **Name the new project** box, type **Classes_M1** and then press Enter.
-    1. In the **Select location for the project** box, select **Default directory**
-    1. In the **Create project or view options** box, select **Create project**
+    1. In the 'Create a new .NET Project' box, select **Console App**.
+    1. In the 'Name the new project' box, type **Classes_M1** and then press Enter.
+    1. In the 'Select location for the project' box, select **Default directory**
+    1. In the 'Create project or view options' box, select **Create project**
 
     You should see a new console app project named **Classes_M1** in the Visual Studio Code EXPLORER view.
 
@@ -74,7 +78,7 @@ Use the following steps to complete this task:
     - Providing context menu options for managing solutions and projects.
     - Supporting Solution Folders for organizing projects within a solution.
 
-1. Under **SOLUTION EXPLORER**, expand the **Classes_M1** solution and locate the **Program.cs** file.
+1. Under **SOLUTION EXPLORER**, expand the **Classes_M1** project and locate the **Program.cs** file.
 
     The structure of your solution should be similar to the following example:
 
@@ -85,7 +89,7 @@ Use the following steps to complete this task:
             Program.cs
     ```
 
-1. Hover the mouse pointer over the two **Classes_M1** "folders" to reveal its association to the solution.
+1. Hover the mouse pointer over the two **Classes_M1** "folders" to reveal their association to the solution.
 
     The **Classes_M1** folder at the top level of the solution represents the solution folder. The **Classes_M1** folder nested under the solution folder represents the project folder. The **Program.cs** file is located within the project folder.
 
@@ -93,9 +97,11 @@ Use the following steps to complete this task:
 
 1. Right-click the **Classes_M1** project, and then select **New File**.
 
-1. In the **Create a new file** dropdown, to create a class file named BankCustomer.cs, select **Class** and then enter **BankCustomer**.
+    If you don't see the option to create a new file, ensure that you're accessing the **Classes_M1** project folder not the **Classes_M1** solution folder.
 
-    You should see a new file named **BankCustomer.cs** in the Visual Studio Code editor. The file should be located in the **Classes_M1** project folder, and the code should look similar to the following code snippet:
+1. In the 'Create a new file' dropdown, to create a class file named BankCustomer.cs, select **Class** and then enter **BankCustomer**.
+
+    You should see a new file named **BankCustomer.cs** open in the Visual Studio Code editor. The file should be located in the **Classes_M1** project folder, and the code should look similar to the following code snippet:
 
     ```csharp
 
@@ -129,7 +135,7 @@ Use the following steps to complete this task:
 
     The `BankCustomer` class now includes a parameterless constructor that writes a message to the console when a new instance of the `BankCustomer` class is created.
 
-1. Your updated `BankCustomer` class should now look like the following code snippet:
+1. Your updated `BankCustomer` class should now look similar to the following code snippet:
 
     ```csharp
 
@@ -156,7 +162,7 @@ Use the following steps to complete this task:
 
     The `BankCustomer` class now includes a second constructor that accepts parameters for the customer's first and last name. The constructor writes a message to the console that includes the customer's first and last name when a new instance of the `BankCustomer` class is created.
 
-1. Your updated `BankCustomer` class should now look like the following code snippet:
+1. Your updated `BankCustomer` class should now look similar to the following code snippet:
 
     ```csharp
 
@@ -175,7 +181,7 @@ Use the following steps to complete this task:
 
     ```
 
-## Update the Program.cs file to create instances of the "BankCustomer" class
+## Update the Program.cs file to create instances of the BankCustomer class
 
 In this task, you update the Program.cs file to create instances of the `BankCustomer` class and run the app to verify that the instances are created successfully.
 
@@ -279,7 +285,7 @@ Use the following steps to complete this task:
 
     Any of these options is fine. Some options are more convenient than others, depending on your preferences. Also, some options use the debugger, which can be helpful when you need to step through your code.
 
-1. Review the output in the terminal window.
+1. Review the output in the Debug Console panel.
 
     You should see the following output:
 
@@ -290,7 +296,7 @@ Use the following steps to complete this task:
 
     ```
 
-## Add public fields and updated constructors to the "BankCustomer" class
+## Add public fields and updated constructors to the BankCustomer class
 
 In this task, you add public fields to the `BankCustomer` class, update the instance constructors to use additional parameters, and then update the Program.cs file to access each object's public data.
 
@@ -298,7 +304,7 @@ Use the following steps to complete this task:
 
 1. Open the BankCustomer.cs file.
 
-1. Add public fields to the class definition for `fName`, `lName`, and `accNumber`. Initialize the fields using default values.
+1. Add the following public fields to the class definition:
 
     ```csharp
 
@@ -307,6 +313,8 @@ Use the following steps to complete this task:
     public string accountId = "1010101010";
 
     ```
+
+    Notice that the fields are initialized with default values.
 
 1. Update the second constructor to assign constructor parameters to the local variables.
 
@@ -460,7 +468,7 @@ Use the following steps to complete this task:
 
     Notice customer1 and customer2 share the same ID number. The public fields are initialized with default values. Although the constructors update the fields with the values passed as parameters, there are clearly some issues to address.
 
-## Update the "BankCustomer" class using static members to ensure unique customer IDs
+## Update the BankCustomer class using static members to ensure unique customer IDs
 
 In this task, you update the `BankCustomer` class using a static field and static constructor to ensure unique `customerId` values are assigned to each new customer object.
 
@@ -542,7 +550,7 @@ Use the following steps to complete this task:
 
     ```
 
-## Create a class named "BankAccount" that implements static members
+## Create a class named BankAccount that implements static members
 
 In this task, you create an `BankAccount` class that initializes the interest rate as a static field.
 
@@ -663,9 +671,7 @@ Use the following steps to complete this task:
 
     ```
 
-1. Run the app
-
-1. Review the output in the terminal window.
+1. Run the app and review the output in the terminal window.
 
     You should see the following output:
 
@@ -682,10 +688,4 @@ Use the following steps to complete this task:
 
 ## Clean up
 
-<!-- Good practice - especially as self-paced learners will be using their own subscriptions -->
-<!-- Delete this section if it is not needed -->
-
-Now that you've finished the exercise, you should ...
-
-1. Step 1
-2. etc.
+Now that you've finished the exercise, consider archiving your project files for review at a later time. Having your own projects available for review can be a valuable resource when you're learning to code. Also, building up a portfolio of projects can be a great way to demonstrate your skills to potential employers.

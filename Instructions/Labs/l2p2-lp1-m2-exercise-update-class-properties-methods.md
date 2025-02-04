@@ -790,10 +790,4 @@ Use the following steps to complete this section of the exercise:
 
 ## Clean up
 
-<!-- Good practice - especially as self-paced learners will be using their own subscriptions -->
-<!-- Delete this section if it is not needed -->
-
-Now that you've finished the exercise, you should ...
-
-1. Step 1
-2. etc.
+Now that you've finished the exercise, consider archiving your project files for review at a later time. Having your own projects available for review can be a valuable resource when you're learning to code. Also, building up a portfolio of projects can be a great way to demonstrate your skills to potential employers.
