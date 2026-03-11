@@ -1,9 +1,13 @@
 ---
 lab:
-    title: 'Exercise - Update a class with properties and methods in C#'
-    module: 'Implement properties and methods in C# classes'
+  title: Exercise - Update a class with properties and methods in C#
+  module: Implement properties and methods in C# classes
+  description: In this exercise, you encapsulate the data and behavior of a class
+    by implementing properties and methods.
+  duration: 30 minutes
+  level: 200
+  islab: true
 ---
-
 
 # Update a class with properties and methods in CSharp
 
