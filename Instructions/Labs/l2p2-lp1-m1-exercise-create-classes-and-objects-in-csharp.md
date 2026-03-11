@@ -1,9 +1,15 @@
 ---
 lab:
-    title: 'Exercise - Create classes and objects in C#'
-    module: 'Get started with classes and objects in C#'
+  title: Exercise - Create classes and objects in C#
+  module: Get started with classes and objects in C#
+  description: A class is a blueprint for creating objects and objects are the building-blocks
+    that make up a program. In C#, you define classes using the `class` keyword. You
+    can create objects from a class using the `new` operator. Each object created
+    from a class is an instance of that class.
+  duration: 25 minutes
+  level: 100
+  islab: true
 ---
-
 
 # Create classes and objects in C#
 
